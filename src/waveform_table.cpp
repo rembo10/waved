@@ -609,6 +609,7 @@ auto decode_fpl_number(const std::string& barcode) -> std::int16_t
 
 auto WaveformTable::discover_wbf_file() -> std::optional<std::string>
 {
+  /*
     auto metadata = read_metadata();
 
     if (metadata.size() < 4) {
@@ -617,7 +618,7 @@ auto WaveformTable::discover_wbf_file() -> std::optional<std::string>
 
     auto fpl_lot = decode_fpl_number(metadata[3]);
 
-    for (const auto& entry : fs::directory_iterator{"/usr/share/remarkable"}) {
+    for (const auto& entry : fs::directory_iterator{"/lib/firmware/waveform"}) {
         if (entry.path().extension().native() != ".wbf") {
             continue;
         }
@@ -641,6 +642,6 @@ auto WaveformTable::discover_wbf_file() -> std::optional<std::string>
             continue;
         }
     }
-
-    return {};
+*/
+    return "/lib/firmware/waveform/eink_waveform.wbf";
 }

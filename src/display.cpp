@@ -37,7 +37,7 @@ Display::Display(
 
 auto Display::discover_framebuffer() -> std::optional<std::string>
 {
-    constexpr auto framebuffer_name = "mxs-lcdif";
+    constexpr auto framebuffer_name = "rockchip";
 
     for (const auto& entry : fs::directory_iterator{"/sys/class/graphics"}) {
         std::ifstream name_stream{entry.path() / "name"};
@@ -66,6 +66,7 @@ auto Display::discover_framebuffer() -> std::optional<std::string>
 
 auto Display::discover_temperature_sensor() -> std::optional<std::string>
 {
+/*
     constexpr auto sensor_name = "sy7636a_temperature";
 
     for (const auto& entry : fs::directory_iterator{"/sys/class/hwmon"}) {
@@ -83,8 +84,8 @@ auto Display::discover_temperature_sensor() -> std::optional<std::string>
             return sensor_path;
         }
     }
-
-    return {};
+*/
+    return "/sys/class/hwmon/hwmon0/device/temp1_input";
 }
 
 Display::~Display()

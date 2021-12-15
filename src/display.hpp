@@ -156,7 +156,7 @@ private:
     // unfortunately they don’t match exactly
 
     // Number of pixels in a row of the buffer
-    static constexpr std::uint32_t buf_width = 260;
+    static constexpr std::uint32_t buf_width = 1404;
 
     // Number of bytes per pixel. The first two bytes of each pixel contain
     // data for 8 actual display pixels (2 bits per pixel). The third byte
@@ -171,7 +171,7 @@ private:
     static constexpr std::uint32_t buf_actual_depth = 8;
 
     // Number of rows in the screen
-    static constexpr std::uint32_t buf_height = 1408;
+    static constexpr std::uint32_t buf_height = 1872;
 
     // Total size of a frame in bytes
     static constexpr std::uint32_t buf_frame = buf_stride * buf_height;
