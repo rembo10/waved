@@ -1,7 +1,7 @@
 {
   description = "Driver for the reMarkable 2 E-Ink display";
 
-  outputs = inputs@{ self, nixpkgs, flake-utils }:
+  outputs = inputs@{ self, nixpkgs, ... }:
     let
       system = "armv7l-linux";
       pkgs = import nixpkgs { inherit system; };
