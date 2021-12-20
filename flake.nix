@@ -16,5 +16,5 @@
           cp waved $out/bin/
         '';
       };
-    }
+    };
 }
