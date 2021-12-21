@@ -9,7 +9,7 @@
       defaultPackage = pkgs.stdenv.mkDerivation {
         name = "waved";
         src = ./.;
-        nativeBuildInputs = [ pkgs.cmake ];
+        nativeBuildInputs = [ pkgs.buildPackages.cmake ];
         buildPhase = "cmake --build .";
         installPhase = ''
           mkdir -p $out/bin
